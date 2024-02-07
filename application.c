@@ -40,9 +40,9 @@ void main()
     {
         ret |= lcd_4bit_send_command(&LCD1 , _LCD_CLEAR);
         ret |= lcd_4bit_send_string_pos(&LCD1 , 2 , 1 , " Entry Successfully!!");
+        Again2:
         ret |= led_turn_on(&green_led);
         ret |= led_turn_off(&red_led);
-        Again2:
         __delay_ms(500);
         ret |= lcd_4bit_send_command(&LCD1 , _LCD_CLEAR);
         ret |= lcd_4bit_send_string_pos(&LCD1 , 1 , 1 , " 1- Change Password");
