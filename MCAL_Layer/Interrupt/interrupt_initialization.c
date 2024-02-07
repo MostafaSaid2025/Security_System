@@ -8,10 +8,12 @@
 #include "interrupt_initialization.h"
 
 extern motor_config_t motor1;
-
+extern led_t green_led , red_led;
 void INT0_Handler(void)
  {
     dc_motor_stop(&motor1);
+    led_turn_off(&green_led);
+    led_turn_on(&red_led);
  }
 void INT1_Handler(void)
  {
